@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Module documentation."""
 
-def sum_list(input_list: list) -> float:
+def sum_list(input_list: list[float]) -> float:
     """Returns the expected result."""
-    new_list = list(map(float, input_list))
 
-    return sum(map(float, new_list))
+    return sum(input_list)
