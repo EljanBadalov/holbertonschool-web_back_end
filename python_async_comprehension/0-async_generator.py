@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Module documentation."""
+
 import asyncio
 import random
 from typing import AsyncGenerator
