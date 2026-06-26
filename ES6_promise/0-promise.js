@@ -1,3 +1,3 @@
 function getResponseFromAPI() {
-    return Promise.resolve(10);
+    return Promise.resolve(true);
 }
