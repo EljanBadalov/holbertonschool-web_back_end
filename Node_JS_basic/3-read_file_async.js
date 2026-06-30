@@ -8,7 +8,6 @@ function countStudents(dataPath) {
         return;
       }
 
-      // Boş sətirləri təmizləyirik (faylın sonundakılar daxil)
       const lines = data.split('\n').filter((line) => line.trim() !== '');
       
       if (lines.length <= 1) {
@@ -39,7 +38,6 @@ function countStudents(dataPath) {
         }
       }
 
-      // Həm konsol, həm də HTTP server üçün mətni hazırlayırıq
       let output = `Number of students: ${totalStudents}`;
       console.log(output);
 
@@ -49,7 +47,6 @@ function countStudents(dataPath) {
         output += `\n${lineMsg}`;
       }
 
-      // Hazır mətni resolve edirik
       resolve(output);
     });
   });
