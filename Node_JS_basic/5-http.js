@@ -9,7 +9,7 @@ const app = http.createServer((req, res) => {
     res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
     res.write('This is the list of our students\n');
-    
+
     const databasePath = process.argv[2];
 
     countStudents(databasePath)
