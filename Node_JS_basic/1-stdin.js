@@ -1,8 +1,13 @@
 console.log("Welcome to Holberton School, what is your name?");
 
-process.stdin.once("data", (data) => {
-  const name = data.toString().trim();
-  console.log("Your name is:", name);
-  console.log("This important software is now closing");
-  process.exit(0);
+process.stdin.on('readable', () => {
+  const chunk = process.stdin.read();
+  
+  if (chunk !== null) {
+    process.stdout.write(`Your name is: ${chunk}`);
+  }
+});
+
+process.stdin.on('end', () => {
+  process.stdout.write("This important software is now closing\n");
 });
