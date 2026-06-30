@@ -8,17 +8,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
-  res.send('This is the list of our students\n');
-
   const databasePath = process.argv[2];
 
-    countStudents(databasePath)
-      .then((studentsInfo) => {
-        res.end(studentsInfo);
-      })
-      .catch((err) => {
-        res.end(err.message);
-      });
+  countStudents(databasePath)
+    .then((studentsInfo) => {
+      res.send(`This is the list of our students\n${studentsInfo}`);
+    })
+    .catch((err) => {
+      res.send(`This is the list of our students\n${err.message}`);
+    });
 });
 
 app.listen(1245);
