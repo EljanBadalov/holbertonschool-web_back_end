@@ -21,4 +21,4 @@ const app = http.createServer((req, res) => {
 
 app.listen(1245);
 
-export default app;
+modeule.exports = app;
