@@ -34,7 +34,7 @@ export default class StudentsController {
       const data = await readDatabase(databasePath);
       const majorList = data[major];
       return response.status(200).send(`List: ${majorList.join(', ')}`)
-    } catch {
+    } catch (error) {
       response.status(500).send('Cannot load the database');
     }
   }
