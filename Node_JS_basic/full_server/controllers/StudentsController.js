@@ -8,7 +8,7 @@ export default class StudentsController {
 
       const fields = Object.keys(data).sort();
 
-      let output = `This is the list of our students`;
+      let output = 'This is the list of our students';
 
       for (const field of fields) {
         const firstnames = data[field];
